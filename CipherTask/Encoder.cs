@@ -11,14 +11,17 @@ namespace CipherTask
     {
         public static void Encode(string mephod)
         {
-            //Needs to receive an input to encode and change it to lowercase just in case the user cannot put in a capital and not break the program
+            //Needs to receive an input to encode and change it to lowercase just in case the user cannot put in a capital and not break the program.
             string Phrase = PhraseForm.GetPhrase(PhraseForm.WhichMephod(mephod)).ToLower();
 
-            //Convert the text into bacon patterns
+            //Convert the text into bacon patterns.
             string PhraseInBacon = EncodingBaconAlgorithm.ToPattern(Phrase);
 
-            //Encoded into a message that cannot be understood or has a obvious pattern
+            //Encoded into a message that cannot be understood or has a obvious pattern.
             string MeaninglessPhrase = PatternObfuscater.ToMeaninglessPhrase(PhraseInBacon);
+            Console.WriteLine(PhraseInBacon);
+
+            Console.ReadLine();
         }
     }
 }

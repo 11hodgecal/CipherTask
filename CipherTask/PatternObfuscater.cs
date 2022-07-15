@@ -8,10 +8,11 @@ namespace CipherTask
 {
     public static class PatternObfuscater
     {
+        //Variables for randomly generating letters
         private static Char[] Lowerletters = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
         private static Char[] CapLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-        private static Char[] Punctuation = ".,".ToCharArray();
         private static Random Random = new Random();
+
 
         private static string ToLowerCapObfuscationString(string Pattern)
         {
