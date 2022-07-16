@@ -23,7 +23,7 @@ namespace CipherTask
 
             if (AllEmpty == true)
             {
-                Menu.Error("Encoded Message only contains spaces");
+                Menu.Error("Encoded/Decoded Message only contains spaces");
             }
         }
     }
