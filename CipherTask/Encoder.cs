@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CipherTask
 {
-    //Responsible for encoding a phrase
+    //Responsible for encoding a phrase.
     public class Encoder
     {
         public static void Encode(string mephod)
@@ -17,11 +17,8 @@ namespace CipherTask
             //Convert the text into bacon patterns.
             string PhraseInBacon = EncodingBaconAlgorithm.ToPattern(Phrase);
 
-            //Encoded into a message that cannot be understood or has a obvious pattern.
-            string MeaninglessPhrase = PatternObfuscater.ToMeaninglessPhrase(PhraseInBacon);
-            Console.WriteLine(PhraseInBacon);
-
-            Console.ReadLine();
+            //Return to menu and returns a obfuscated encoded message.
+            Menu.ShowResults(mephod,Phrase, PatternObfuscater.ToMeaninglessPhrase(PhraseInBacon));
         }
     }
 }

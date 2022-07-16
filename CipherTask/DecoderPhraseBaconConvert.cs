@@ -44,7 +44,6 @@ namespace CipherTask
             //The phrase converted to a char array.
             var PhraseCharList = phrase.ToCharArray();
 
-
             //Loops through the characters
             foreach (char ch in PhraseCharList)
             {

@@ -19,6 +19,9 @@ namespace CipherTask
 
             //Find Patterns in the phrase.
             var PhrasePatterns = DecodingBaconAlgorithm.GetBaconPatterns(ConvertedPhrase);
+
+            //return to the menu and returns the encoded message.
+            Menu.ShowResults(mephod, Phrase, DecodingBaconAlgorithm.RetrieveDecodedMessage(PhrasePatterns));
         }
     }
 }

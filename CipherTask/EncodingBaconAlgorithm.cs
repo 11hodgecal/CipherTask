@@ -41,10 +41,13 @@ namespace CipherTask
             {" ","lllll"},
             {".","llllu"},
         };
-        //Turns a provided Phrase into a Bacon Pattern
+        //Turns a provided Phrase into a Bacon Pattern.
         public static string ToPattern(string phrase)
         {
-            //The Phrase is turned into a char array
+            //check the string is not empty
+            PhraseEmptyCheck.Check(phrase.ToCharArray());
+
+            //The Phrase is turned into a char array.
             var CharlistPhrase = phrase.ToCharArray();
             string MessageInPattern = "";
 
@@ -62,7 +65,7 @@ namespace CipherTask
                 
             }
 
-            //Returns the Converted Message
+            //Returns the converted Message.
             return MessageInPattern;
         }
     }

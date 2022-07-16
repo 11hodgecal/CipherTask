@@ -24,7 +24,7 @@ namespace CipherTask
                 return "decode";
             }
 
-            //returns null if it does not equal either.
+            //Returns null if it does not equal either.
             return null;
         }
 

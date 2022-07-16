@@ -67,18 +67,35 @@ namespace CipherTask
         //Decodes a list of bacon patterns into a message.
         public static string RetrieveDecodedMessage(List<string> BaconPatterns)
         {
+            //bool to check if the message is all empty.
             string message = "";
+
+            //The decoded letter will be added onto the message.
             foreach(string Pattern in BaconPatterns)
             {
                 message += DecodeLetter(Pattern);
             }
+
+            //checks the message is not empty.
+            PhraseEmptyCheck.Check(message.ToCharArray());
+
             return message;
         }
 
         //Matches the pattern to a letter then returns the decoded letter.
         private static string DecodeLetter(string BaconPattern)
         {
-            var decodedletter = BaconPatternValues[BaconPattern];
+            var decodedletter = "";
+            //The function will try to decode the pattern and if it is not recognisable it will task the user to the error menu with a appropriate message.
+            try
+            {
+                decodedletter = BaconPatternValues[BaconPattern];
+            }
+            catch
+            {
+                Menu.Error("Could not decode your message there was a unknown character");
+            }
+
             return decodedletter;
         }
     }
